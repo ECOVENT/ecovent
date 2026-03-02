@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1766304675521,
+      "tag": "0000_fast_payback",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1766304756455,
+      "tag": "0001_white_vance_astro",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1768290360448,
+      "tag": "0002_tricky_nextwave",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1768825328319,
+      "tag": "0003_superb_crusher_hogan",
+      "breakpoints": true
+    }
+  ]
+}
