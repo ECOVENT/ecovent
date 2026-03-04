@@ -26,7 +26,6 @@ import AdminContacts from "./pages/admin/Contacts";
 import AdminQuotes from "./pages/admin/Quotes";
 import AdminSettings from "./pages/admin/Settings";
 import AdminBlog from "./pages/admin/Blog";
-import { AuthGuard } from "@/_core/components/AuthGuard";
 
 function Router() {
   return (
@@ -48,41 +47,13 @@ function Router() {
         <Route path="/sitemap" component={Sitemap} />
       
       {/* Admin Routes */}
-      <Route path={"/admin"}>
-        <AuthGuard requireOwner>
-          <AdminDashboard />
-        </AuthGuard>
-      </Route>
-      <Route path={"/admin/products"}>
-        <AuthGuard requireOwner>
-          <AdminProducts />
-        </AuthGuard>
-      </Route>
-      <Route path={"/admin/projects"}>
-        <AuthGuard requireOwner>
-          <AdminProjects />
-        </AuthGuard>
-      </Route>
-      <Route path={"/admin/contacts"}>
-        <AuthGuard requireOwner>
-          <AdminContacts />
-        </AuthGuard>
-      </Route>
-      <Route path={"/admin/quotes"}>
-        <AuthGuard requireOwner>
-          <AdminQuotes />
-        </AuthGuard>
-      </Route>
-      <Route path={"/admin/settings"}>
-        <AuthGuard requireOwner>
-          <AdminSettings />
-        </AuthGuard>
-      </Route>
-      <Route path={"/admin/blog"}>
-        <AuthGuard requireOwner>
-          <AdminBlog />
-        </AuthGuard>
-      </Route>
+      <Route path={"/admin"} component={AdminDashboard} />
+      <Route path={"/admin/products"} component={AdminProducts} />
+      <Route path={"/admin/projects"} component={AdminProjects} />
+      <Route path={"/admin/contacts"} component={AdminContacts} />
+      <Route path={"/admin/quotes"} component={AdminQuotes} />
+      <Route path={"/admin/settings"} component={AdminSettings} />
+      <Route path={"/admin/blog"} component={AdminBlog} />
       
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}

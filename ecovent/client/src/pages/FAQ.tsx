@@ -125,7 +125,7 @@ export default function FAQ() {
   return (
     <>
       <Helmet>
-        <title>الأسئلة الشائعة حول التهوية والمراوح الصناعية | ECOVENT</title>
+        <title>الأسئلة الشائعة حول التهوية والمراوح الصناعية | ايكوفنت</title>
         <meta name="description" content="إجابات شاملة على جميع أسئلتك حول أنظمة التهوية الصناعية والمراوح. دليل كامل للتهوية والمراوح الصناعية في السعودية." />
         <meta name="keywords" content="أسئلة شائعة تهوية، FAQ تهوية صناعية، أسئلة مراوح صناعية، دليل التهوية، استفسارات التهوية" />
         <script type="application/ld+json">
