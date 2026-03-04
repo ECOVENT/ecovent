@@ -455,7 +455,7 @@ export default function ProductDetail() {
                   طلب عرض سعر
                 </Button>
               </Link>
-              <a href="tel:0554070875">
+              <a href="tel:507947078">
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
                   <Phone className="ml-2 w-4 h-4" />
                   اتصل بنا
