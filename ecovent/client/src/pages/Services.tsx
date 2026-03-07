@@ -14,8 +14,7 @@ const defaultServices = [
     icon: "Settings",
     features: JSON.stringify([
       "دراسات جدوى فنية",
-      "حسابات الأحمال الحرارية",
-      "تصميم شبكات التوزيع",
+       "تصميم شبكات التوزيع",
       "رسومات تنفيذية معتمدة",
       "محاكاة CFD"
     ])
@@ -64,7 +63,7 @@ const defaultServices = [
   },
   {
     id: 5,
-    titleAr: "حلول كفاءة الطاقة",
+    titleAr: "حلول تحكم وكفاءة الطاقه",
     titleEn: "Energy Efficiency Solutions",
     descriptionAr: "نساعدك في تقليل استهلاك الطاقة وتحسين كفاءة أنظمة التهوية من خلال التقييم الشامل وتقديم حلول التحديث والتطوير.",
     icon: "Zap",
@@ -76,6 +75,7 @@ const defaultServices = [
       "تقارير التوفير"
     ])
   },
+
   {
     id: 6,
     titleAr: "الدعم الفني",
@@ -270,7 +270,7 @@ export default function Services() {
               </Link>
               <a href="tel:0507947078">
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                  اتصل بنا: 050 794 7078
+                  اتصل بنا: 0507947078
                 </Button>
               </a>
             </div>

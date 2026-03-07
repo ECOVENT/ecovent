@@ -61,7 +61,8 @@ export default function Contact() {
     {
       icon: <Mail className="w-6 h-6" />,
       title: "البريد الإلكتروني",
-      details: ["info@ecovent.sa", "www.ecovent-sa.com"],
+      details: ["info@ecovent.sa", 
+               "www.ecovent-sa.com"],
     },
     {
       icon: <Clock className="w-6 h-6" />,
@@ -227,7 +228,7 @@ export default function Contact() {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"></iframe>
-                    title="موقع ECOVENT"
+                    title="موقع ايكوفنت على الخريطة"
                 </div>
 
                 {/* Quick Contact */}

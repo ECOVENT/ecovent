@@ -13,7 +13,7 @@ const defaultProducts = [
     nameEn: "Centrifugal Fans",
     descriptionAr: "مراوح طرد مركزي عالية الكفاءة مصممة للتطبيقات الصناعية الثقيلة. توفر تدفق هواء قوي ومستقر مع مستويات ضوضاء منخفضة.",
     category: "industrial",
-    imageUrl: "/images/blog/3d_no_bg_p5.png",
+    imageUrl: "/images/blog/تصميم بدون عنوان.png",
     specifications: JSON.stringify({
       "معدل التدفق": "1,000 - 50,000 م³/ساعة",
       "الضغط": "حتى 3,000 باسكال",
@@ -27,7 +27,7 @@ const defaultProducts = [
     nameEn: "Industrial Axial Fans",
     descriptionAr: "مراوح محورية قوية للتهوية العامة والتبريد. مثالية للمستودعات والمصانع الكبيرة.",
     category: "industrial",
-    imageUrl: "/images/blog/fan-axial-industrial(1).png",
+    imageUrl: "/images/blog/whatsapp1.png",
     specifications: JSON.stringify({
       "معدل التدفق": "5,000 - 200,000 م³/ساعة",
       "الضغط": "حتى 1,500 باسكال",
@@ -35,22 +35,22 @@ const defaultProducts = [
       "الكفاءة": "حتى 85%"
     })
   },
-  {
-    id: 3,
-    nameAr: "وحدات معالجة الهواء",
-    nameEn: "Air Handling Units",
-    descriptionAr: "وحدات معالجة هواء متكاملة للتحكم في جودة الهواء ودرجة الحرارة والرطوبة في المباني الكبيرة.",
-    category: "hvac",
-    imageUrl: "/images/blog/ahu.jpg",
+  
+  {id: 3,
+    nameAr: "أنظمة شفط الدخان",
+    nameEn: "Smoke Extraction Systems",
+    descriptionAr: "أنظمة شفط دخان متقدمة للسلامة من الحرائق، معتمدة وفق المعايير الدولية.",
+    category: "safety",
+    imageUrl: "/images/blog/smoke22.png",
     specifications: JSON.stringify({
-      "السعة": "1,000 - 100,000 م³/ساعة",
-      "التبريد": "حتى 500 كيلوواط",
-      "التدفئة": "حتى 300 كيلوواط",
-      "الترشيح": "G4 - H14"
+      "درجة الحرارة": "حتى 400°C لمدة 2 ساعة",
+      "الاعتماد": "EN 12101-3",
+      "التحكم": "أوتوماتيكي / يدوي",
+      "التكامل": "مع أنظمة إنذار الحريق"
     })
+    
   },
-  {
-    id: 4,
+  {id: 4,
     nameAr: "مراوح السقف",
     nameEn: "Roof Fans",
     descriptionAr: "مراوح سقف مقاومة للعوامل الجوية للتهوية الطبيعية والميكانيكية للمباني الصناعية والتجارية.",
@@ -65,25 +65,11 @@ const defaultProducts = [
   },
   {
     id: 5,
-    nameAr: "أنظمة شفط الدخان",
-    nameEn: "Smoke Extraction Systems",
-    descriptionAr: "أنظمة شفط دخان متقدمة للسلامة من الحرائق، معتمدة وفق المعايير الدولية.",
-    category: "safety",
-    imageUrl: "/images/blog/kitchen-hood-system(1).png",
-    specifications: JSON.stringify({
-      "درجة الحرارة": "حتى 400°C لمدة 2 ساعة",
-      "الاعتماد": "EN 12101-3",
-      "التحكم": "أوتوماتيكي / يدوي",
-      "التكامل": "مع أنظمة إنذار الحريق"
-    })
-  },
-  {
-    id: 6,
     nameAr: "فلاتر الهواء الصناعية",
     nameEn: "Industrial Air Filters",
     descriptionAr: "فلاتر هواء عالية الكفاءة لتنقية الهواء من الجسيمات والملوثات في البيئات الصناعية.",
     category: "filtration",
-    imageUrl: "/images/blog/Filter-24.jpg",
+    imageUrl: "/images/blog/air.jpeg",
     specifications: JSON.stringify({
       "الكفاءة": "85% - 99.995%",
       "الفئة": "G4 - U17",
@@ -106,7 +92,15 @@ export default function Products() {
   const { data: dbProducts, isLoading } = trpc.products.list.useQuery();
   
   // Use database products if available, otherwise use defaults
-  const products = dbProducts && dbProducts.length > 0 ? dbProducts : defaultProducts;
+  // if the database has products but some lack imageUrl, merge with defaults to supply images
+  let products = dbProducts && dbProducts.length > 0 ? dbProducts : defaultProducts;
+  if (dbProducts && dbProducts.length > 0) {
+    products = dbProducts.map((p) => {
+      if (p.imageUrl) return p;
+      const def = defaultProducts.find((d) => d.id === p.id);
+      return def ? { ...p, imageUrl: def.imageUrl } : p;
+    });
+  }
 
   const getIcon = (category: string | null) => {
     switch (category) {

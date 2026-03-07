@@ -18,7 +18,7 @@ const productsData: Record<string, any> = {
     fullDescription: `تُعد مراوحنا المحورية الصناعية الحل الأمثل لتوفير تهوية فعالة وموثوقة في المنشآت الصناعية الكبيرة. صُممت هذه المراوح باستخدام أحدث التقنيات لتوفير أداء عالي مع استهلاك طاقة منخفض.
 
 تتميز مراوحنا بقدرتها على تحريك كميات كبيرة من الهواء بكفاءة عالية، مما يجعلها مثالية للمستودعات والمصانع والمنشآت الصناعية التي تتطلب تهوية مستمرة وفعالة.`,
-    image: "/images/blog/34.jpg",
+    image: "/images/blog/.png",
     specs: {
       flowRate: "5,000 - 200,000 م³/ساعة",
       pressure: "حتى 1,500 باسكال",
@@ -44,7 +44,7 @@ const productsData: Record<string, any> = {
       "مراكز البيانات"
     ],
     certifications: ["ISO 9001", "CE Mark", "SASO"],
-    price: "يبدأ من 5,000 ريال",
+    //price: "يبدأ من 5,000 ريال",
     deliveryTime: "2-4 أسابيع"
   },
   "centrifugal-fans": {
@@ -56,7 +56,7 @@ const productsData: Record<string, any> = {
     fullDescription: `مراوحنا الطاردة المركزية مصممة لتوفير ضغط عالي مع كفاءة استثنائية، مما يجعلها الخيار المثالي لأنظمة التكييف المركزي والتطبيقات التي تتطلب ضغطاً ثابتاً.
 
 تتميز بتصميم هندسي متقدم يضمن أداءً موثوقاً وعمراً افتراضياً طويلاً، مع الحد الأدنى من الضوضاء والاهتزاز.`,
-    image: "/images/blog/center fugal11.jpg",
+    image: "/images/blog/تصميم بدون عنوان.png",
     specs: {
       flowRate: "1,000 - 50,000 م³/ساعة",
       pressure: "حتى 3,000 باسكال",
@@ -82,7 +82,7 @@ const productsData: Record<string, any> = {
       "صناعات الأغذية والأدوية"
     ],
     certifications: ["ISO 9001", "CE Mark", "SASO", "AMCA"],
-    price: "يبدأ من 8,000 ريال",
+    //price: "يبدأ من 8,000 ريال",
     deliveryTime: "3-5 أسابيع"
   },
   "exhaust-systems": {
@@ -94,7 +94,7 @@ const productsData: Record<string, any> = {
     fullDescription: `أنظمة شفط الهواء المتكاملة من ECOVENT مصممة لإزالة الملوثات والروائح والأبخرة بكفاءة عالية، مع الحفاظ على بيئة عمل صحية وآمنة.
 
 تشمل أنظمتنا مراوح شفط قوية، مجاري هواء محكمة، وفلاتر متقدمة لضمان جودة هواء مثالية داخل المنشأة.`,
-    image: "/images/blog/air-handling-unit-768x565.png",
+    image: "/images/blog/smoke22.png",
     specs: {
       flowRate: "2,000 - 100,000 م³/ساعة",
       pressure: "حتى 2,500 باسكال",
@@ -120,7 +120,7 @@ const productsData: Record<string, any> = {
       "محطات معالجة النفايات"
     ],
     certifications: ["ISO 9001", "CE Mark", "SASO", "NFPA 96"],
-    price: "يبدأ من 25,000 ريال",
+
     deliveryTime: "4-8 أسابيع"
   },
 
@@ -154,7 +154,7 @@ const productsData: Record<string, any> = {
     description: "أنظمة متخصصة لطرد الدخان والحرارة في حالات الطوارئ لضمان إخلاء آمن للمنشآت.",
     fullDescription: `تعتبر أنظمة شفط الدخان من ECOVENT خط الدفاع الأول في حالات الحريق. صُممت هذه الأنظمة لتعمل بكفاءة تحت درجات حرارة قصوى تصل إلى 400 درجة مئوية.
     تعمل هذه المراوح على سحب الغازات السامة والدخان الكثيف من الممرات ومواقف السيارات، مما يسمح لفرق الإنقاذ بالدخول ويضمن رؤية أوضح للأشخاص أثناء الإخلاء.`,
-    image: "/images/blog/1.jpg",
+    image: "/images/blog/smoke0.png",
     specs: {
       flowRate: "10,000 - 150,000 م³/ساعة",
       pressure: "حتى 2,500 باسكال",
@@ -188,7 +188,7 @@ const productsData: Record<string, any> = {
     description: "حلول تنقية متطورة لإزالة الغبار، الأبخرة، والملوثات الدقيقة في البيئات الصناعية.",
     fullDescription: `توفر ECOVENT أنظمة فلترة متكاملة تبدأ من الفلاتر الأولية (Pre-filters) وحتى الفلاتر فائقة الدقة (HEPA). 
     هذه الأنظمة مصممة لحماية جودة الهواء الداخلي والحفاظ على كفاءة المعدات الميكانيكية من خلال منع تراكم الأتربة والشوائب داخلها.`,
-    image: "/images/blog/airfilters.jpg",
+    image: "/images/blog/air.jpeg",
     specs: {
       filterEfficiency: "تتراوح من G4 إلى H14 (HEPA)",
       flowRate: "تصميم مخصص حسب حجم النظام",
@@ -211,7 +211,7 @@ const productsData: Record<string, any> = {
       "ورش الطلاء والدهان"
     ],
     certifications: ["ISO 16890", "EN 1822", "ASHRAE 52.2"],
-    price: "تبدأ من 450 ريال",
+    //price: "تبدأ من 450 ريال",
     deliveryTime: "1-2 أسبوع"
   }
 };
@@ -230,9 +230,8 @@ export default function ProductDetail() {
       "1": "centrifugal-fans",
       "2": "axial-fans",
       "3": "exhaust-systems",
-      "4":  "ceiling-fans",
-      "5":"smoke-extraction", // أنظمة شفط الدخان
-      "6": "industrial-filters" // فلاتر الهواء الصناعية
+      "4":"ceiling-fans", // أنظمة شفط الدخان
+      "5": "industrial-filters" // فلاتر الهواء الصناعية
       
     };
     const mappedId = idMap[productId];
@@ -426,7 +425,7 @@ export default function ProductDetail() {
                   <h3 className="text-2xl font-bold mb-4">معلومات الطلب</h3>
                   <div className="space-y-3">
                     <div>
-                      <span className="text-sm text-muted-foreground">السعر</span>
+                      <span className="text-sm text-muted-foreground"></span>
                       <p className="text-xl font-bold text-secondary">{product.price}</p>
                     </div>
                     <div>

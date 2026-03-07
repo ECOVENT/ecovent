@@ -1,4 +1,5 @@
 import { drizzle } from "drizzle-orm/mysql2";
+import { eq } from "drizzle-orm";
 import { blogArticles } from "./drizzle/schema.ts";
 import * as dotenv from "dotenv";
 
@@ -318,6 +319,13 @@ async function seedBlog() {
     console.log("Starting blog seeding...");
     
     for (const article of articles) {
+      // Check if article already exists
+      const existing = await db.select().from(blogArticles).where(eq(blogArticles.slug, article.slug));
+      if (existing.length > 0) {
+        console.log(`⚠ Article already exists: ${article.titleAr}`);
+        continue;
+      }
+      
       await db.insert(blogArticles).values(article);
       console.log(`✓ Added article: ${article.titleAr}`);
     }

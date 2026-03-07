@@ -219,11 +219,12 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
-                <a href="tel:507947078" className="text-gray-300 hover:text-white dir-ltr">507947078</a>
+                <a href="tel:507947078" className="text-gray-300 hover:text-white dir-ltr">0507947078</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
                 <a href="mailto:info@ecovent-sa.com" className="text-gray-300 hover:text-white">info@ecovent-sa.com</a>
+                  <a href="https://www.ecovent-sa.com" className="text-gray-300 hover:text-white">www.ecovent-sa.com</a>
               </li>
             </ul>
           </div>
