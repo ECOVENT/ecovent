@@ -56,7 +56,7 @@ export default function Contact() {
     {
       icon: <Phone className="w-6 h-6" />,
       title: "الهاتف",
-      details: ["0507947078"],
+      details: ["+966554070875"],
     },
     {
       icon: <Mail className="w-6 h-6" />,
@@ -239,17 +239,17 @@ export default function Contact() {
                   </p>
                   <div className="space-y-4">
                     <a 
-                      href="tel:0507947078" 
+                      href="tel:966554070875" 
                       className="flex items-center gap-3 bg-white/10 p-4 rounded-lg hover:bg-white/20 transition-colors"
                     >
                       <Phone className="w-6 h-6" />
                       <div>
                         <p className="text-sm opacity-80">اتصل بنا</p>
-                        <p className="font-bold text-lg">0507947078</p>
+                        <p className="font-bold text-lg">966554070875</p>
                       </div>
                     </a>
                     <a 
-                      href="https://wa.me/966507947078" 
+                      href="https://wa.me/966554070875" 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-3 bg-green-500/20 p-4 rounded-lg hover:bg-green-500/30 transition-colors"

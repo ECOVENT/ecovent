@@ -44,7 +44,6 @@ const productsData: Record<string, any> = {
       "مراكز البيانات"
     ],
     certifications: ["ISO 9001", "CE Mark", "SASO"],
-    //price: "يبدأ من 5,000 ريال",
     deliveryTime: "2-4 أسابيع"
   },
   "centrifugal-fans": {
@@ -82,7 +81,6 @@ const productsData: Record<string, any> = {
       "صناعات الأغذية والأدوية"
     ],
     certifications: ["ISO 9001", "CE Mark", "SASO", "AMCA"],
-    //price: "يبدأ من 8,000 ريال",
     deliveryTime: "3-5 أسابيع"
   },
   "exhaust-systems": {
@@ -120,7 +118,6 @@ const productsData: Record<string, any> = {
       "محطات معالجة النفايات"
     ],
     certifications: ["ISO 9001", "CE Mark", "SASO", "NFPA 96"],
-
     deliveryTime: "4-8 أسابيع"
   },
 
@@ -142,7 +139,6 @@ const productsData: Record<string, any> = {
     features: ["محركات موفرة للطاقة", "تشغيل هادئ جداً"],
     applications: ["المساجد", "المولات", "المستودعات المكيفة"],
     certifications: ["ISO 9001", "SASO"],
-    price: "يبدأ من 1,500 ريال",
     deliveryTime: "1-2 أسبوع"
   },
 
