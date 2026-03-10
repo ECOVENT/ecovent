@@ -3,11 +3,13 @@ import { Link, useLocation } from "wouter";
 import { Menu, X, Phone, Mail, MapPin, ChevronDown, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useAuth } from "@/_core/hooks/useAuth";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [location] = useLocation();
+  const { isAuthenticated } = useAuth();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,7 +19,7 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
+  const baseNavLinks = [
     { name: "الرئيسية", href: "/" },
     { name: "من نحن", href: "/about" },
     { name: "المنتجات", href: "/products" },
@@ -28,6 +30,10 @@ export function Header() {
     { name: "الأسئلة الشائعة", href: "/faq" },
     { name: "تواصل معنا", href: "/contact" },
   ];
+
+  const adminLink = { name: "الإدارة", href: "/admin" };
+
+  const navLinks = isAuthenticated ? [...baseNavLinks, adminLink] : baseNavLinks;
 
   return (
     <header

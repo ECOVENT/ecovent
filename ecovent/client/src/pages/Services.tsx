@@ -268,9 +268,9 @@ export default function Services() {
                   تواصل معنا الآن
                 </Button>
               </Link>
-              <a href="tel:0507947078">
+              <a href="tel:+966554070875">
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                  اتصل بنا: 0507947078
+                  اتصل بنا: 966554070875
                 </Button>
               </a>
             </div>
