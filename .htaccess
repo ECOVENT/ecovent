@@ -1,0 +1,27 @@
+PassengerAppRoot /home/u381164324/domains/ecovent-sa.com/nodejs
+PassengerAppType node
+PassengerNodejs /opt/alt/alt-nodejs20/root/bin/node
+PassengerStartupFile index.js
+PassengerBaseURI /
+PassengerRestartDir /home/u381164324/domains/ecovent-sa.com/nodejs/tmp
+SetEnv NODE_OPTIONS "--require /home/u381164324/domains/ecovent-sa.com/public_html/.builds/config/preload-timestamp.js"
+SetEnv LSNODE_CONSOLE_LOG console.log
+RewriteRule ^\.builds - [F,L]
+# Add to .htaccess
+SetEnv DATABASE_URL "mysql://u381164324_ecovent:fF*8j0X1t@srv579.hstgr.io:3306/u381164324_ecovent_db"
+
+# React Router - SPA routing
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  
+  # Don't rewrite files or directories
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  
+  # Don't rewrite API calls
+  RewriteCond %{REQUEST_URI} !^/api/
+  
+  # Rewrite everything else to index.html
+  RewriteRule ^ index.html [L]
+</IfModule>
